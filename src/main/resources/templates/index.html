@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <title>Main page</title>
@@ -8,9 +9,12 @@
 
 Main page<br/><br/><br/>
 
-<form action="/">
+<form action="/" method="post">
     <input name="button1" value="Kliknięto" type="submit"/>
 </form>
+
+<br/><br/>
+<div  th:text="${text}"></div>
 
 
 </body>
