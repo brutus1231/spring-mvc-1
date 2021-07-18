@@ -4,6 +4,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestAttribute;
+
+import java.util.List;
 
 @Controller
 public class MainController {
@@ -23,4 +26,14 @@ public class MainController {
     public String main(Model model) {
         return "mainPage";
     }
+
+    @PostMapping("/main/check")
+    public String checkClientId(@RequestAttribute("clientId") String clientId, Model model) {
+
+        List<String> clientIds = List.of("1000", "2000", "3000");
+        boolean isClientExist = clientIds.contains(clientId);
+        model.addAttribute("clientExists", isClientExist);
+        return "mainPage";
+    }
+
 }

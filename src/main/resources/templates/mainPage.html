@@ -79,8 +79,9 @@ sweet, but not too short so folks don't simply skip over it entirely.</p>
                       <input name="clientId" type="text" class="form-control" id="clientId" aria-describedby="clientHelp" placeholder="Enter client id">
                       <small id="clientHelp" class="form-text text-muted">We'll never share your client id with anyone else.</small>
                   </div>
-                  <button type="submit" class="btn btn-primary">Sprawdź</button>
+                  <button name="buttonCheck" type="submit" class="btn btn-primary">Sprawdź</button>
               </form>
+              <div  th:text="${clientExists}"></div>
           </div>
       </section>
 
