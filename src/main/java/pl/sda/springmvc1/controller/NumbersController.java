@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 public class NumbersController {
 
     @GetMapping("/numbers/{myNumber}")
-    public String page(@PathVariable Long myNumber, Model model){
+    public String page(@PathVariable Long myNumber, Model model) {
         model.addAttribute("number", "Wybrano " + myNumber);
         return "numbers";
     }
