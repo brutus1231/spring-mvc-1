@@ -18,4 +18,9 @@ public class MainController {
         model.addAttribute("text", "Klieknięto");
         return "index";
     }
+
+    @GetMapping("/main")
+    public String main(Model model) {
+        return "mainPage";
+    }
 }
