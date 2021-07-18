@@ -3,6 +3,7 @@ package pl.sda.springmvc1.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestAttribute;
 
@@ -28,7 +29,7 @@ public class MainController {
     }
 
     @PostMapping("/main/check")
-    public String checkClientId(@RequestAttribute("clientId") String clientId, Model model) {
+    public String checkClientId(@ModelAttribute("clientId") String clientId, Model model) {
 
         List<String> clientIds = List.of("1000", "2000", "3000");
         boolean isClientExist = clientIds.contains(clientId);
