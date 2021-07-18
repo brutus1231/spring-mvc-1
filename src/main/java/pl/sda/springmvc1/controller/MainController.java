@@ -38,4 +38,15 @@ public class MainController {
         return "mainPage";
     }
 
+
+    @PostMapping("/main")
+    public String forwardButtonClick(Model model) {
+        return "index";
+    }
+
+
+    @PostMapping("/main2")
+    public String redirectButtonClick(Model model) {
+        return "redirect:";
+    }
 }
