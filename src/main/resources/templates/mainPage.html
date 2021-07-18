@@ -81,7 +81,16 @@ sweet, but not too short so folks don't simply skip over it entirely.</p>
                   </div>
                   <button name="buttonCheck" type="submit" class="btn btn-primary">Sprawdź</button>
               </form>
-              <div  th:text="${clientExists}"></div>
+              <div style="padding-top: 10px">
+                  <div th:if="${clientExists}" class="alert alert-success" role="alert">
+                      Klient o id <span th:text="${clientId}"></span> istnieje
+                  </div>
+                  <div th:if="${clientExists == false}"class="alert alert-danger" role="alert">
+                      Klient o id <span th:text="${clientId}"></span> nie istnieje
+                  </div>
+              </div>
+
+
           </div>
       </section>
 

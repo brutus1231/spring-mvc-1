@@ -34,6 +34,7 @@ public class MainController {
         List<String> clientIds = List.of("1000", "2000", "3000");
         boolean isClientExist = clientIds.contains(clientId);
         model.addAttribute("clientExists", isClientExist);
+        model.addAttribute("clientId", clientId);
         return "mainPage";
     }
 
