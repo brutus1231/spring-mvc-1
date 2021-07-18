@@ -10,8 +10,8 @@ public class MainController {
 
     @GetMapping("/")
     public String mainPage(@ModelAttribute("button1") String button,
-                                       Model model) {
-        if(button != null && !button.isEmpty()){
+                           Model model) {
+        if (button != null && !button.isEmpty()) {
             model.addAllAttributes("text", "Klieknięto");
         }
         return "index";
