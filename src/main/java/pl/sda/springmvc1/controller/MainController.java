@@ -12,7 +12,7 @@ public class MainController {
     public String mainPage(@ModelAttribute("button1") String button,
                            Model model) {
         if (button != null && !button.isEmpty()) {
-            model.addAllAttributes("text", "Klieknięto");
+            model.addAttribute("text", "Klieknięto");
         }
         return "index";
     }
